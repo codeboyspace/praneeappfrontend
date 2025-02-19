@@ -29,7 +29,7 @@ const UserForm = () => {
 
     // Generate QR Code for Phone Upload
     const generateQrCode = async () => {
-        const res = await axios.post("http://10.99.47.181:8000/api/generate_qr/");
+        const res = await axios.post("https://praneeappbackend.onrender.com/api/generate_qr/");
         setUploadId(res.data.upload_id);
         setQrCode(`http://10.99.47.181:3000/upload/${res.data.upload_id}`);
         setShowQR(true);
@@ -38,7 +38,7 @@ const UserForm = () => {
     // Fetch Uploaded Photo from Phone
     const checkForUploadedPhoto = async () => {
         try {
-            const response = await axios.get(`http://10.99.47.181:8000/api/get_uploaded_photo/${uploadId}/`);
+            const response = await axios.get(`https://praneeappbackend.onrender.com/api/get_uploaded_photo/${uploadId}/`);
             if (response.data.photo_url) {
                 setUploadedPhoto(response.data.photo_url);
                 setShowQR(false);
