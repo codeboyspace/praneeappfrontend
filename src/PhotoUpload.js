@@ -16,7 +16,7 @@ const PhoneUpload = () => {
         const formData = new FormData();
         formData.append("photo", selectedPhoto);
 
-        await axios.post(`http://10.99.47.181:8000/api/upload_photo/${uploadId}/`, formData);
+        await axios.post(`https://praneeappbackend.onrender.com/api/upload_photo/${uploadId}/`, formData);
         alert("Photo uploaded! You can check on your computer.");
     };
 
