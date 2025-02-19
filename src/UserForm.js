@@ -31,7 +31,7 @@ const UserForm = () => {
     const generateQrCode = async () => {
         const res = await axios.post("https://praneeappbackend.onrender.com/api/generate_qr/");
         setUploadId(res.data.upload_id);
-        setQrCode(`https://praneeappfrontend-b3lrkk54y-codeboyspaces-projects.vercel.app/upload/${res.data.upload_id}`);
+        setQrCode(`https://frontend-eosin-six-51.vercel.app/upload/${res.data.upload_id}`);
         setShowQR(true);
     };
 
